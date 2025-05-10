@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arg Sk8</title>
+    <link rel="stylesheet" href="estilo.css" />
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html">
+        <img class="logo" src="Sin titulo-1.svg" alt="Logo Arg Sk8" />
+      </a>
+
+      <button class="hamburguesa" aria-label="Abrir menú">☰</button>
+
+      <nav>
+        <ul class="menu">
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="artsk8.html">Art Sk8</a></li>
+          <li><a href="eventos.html">Eventos</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Nosotros</h1>
+      <p>
+        Bienvenido a Arg Sk8. Somos un espacio dedicado al arte urbano, el skate
+        y la cultura callejera. 
+        
+      </p>
+      <p>Esta pagina nace con la intención de ser un foco online para todo lo relacionado al skaterboarding. 
+        Queremos impulsar a los skater, les brindara un espacio para reflexionar, debatir y promover esta hermosa disciplina, su culta y novedades. 
+        Queremos que se conozca la historia. Que exploren la faceta artistica del skate mostrando la creatividad que fluye en las calles y los skateparks. 
+        Esta pagina sera un espacio creado por y para los amantes del skate, donde se comparte la pasión, los talentos se descubren y la cultura se celebra en cada parte de este país
+</p>
+      <!-- SLIDER COMIENZO -->
+      <section class="slider" aria-label="Galería de imágenes de Arg Sk8">
+        <div class="slider-container">
+          <img src="ciro11.jpg" alt="Skater en la pista" class="slide active" />
+          <img src="ciro10.jpg" alt="Skate urbano sobre baranda" class="slide" />
+         
+        </div>
+        <button class="prev" aria-label="Imagen anterior">&#10094;</button>
+        <button class="next" aria-label="Imagen siguiente">&#10095;</button>
+      </section>
+      <!-- SLIDER FIN -->
+
+    </main>
+
+    <footer>
+      Argentina 2025 Catalina Dominguez
+    </footer>
+
+    <script>
+      // Menú hamburguesa
+      const btn = document.querySelector('.hamburguesa');
+      const menu = document.querySelector('nav ul');
+
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('mostrar');
+      });
+
+      // Slider
+      const slides = document.querySelectorAll('.slide');
+      const prevBtn = document.querySelector('.prev');
+      const nextBtn = document.querySelector('.next');
+      let index = 0;
+
+      function showSlide(i) {
+        slides.forEach((slide, j) => {
+          slide.classList.remove('active');
+          if (i === j) slide.classList.add('active');
+        });
+      }
+
+      function nextSlide() {
+        index = (index + 1) % slides.length;
+        showSlide(index);
+      }
+
+      function prevSlide() {
+        index = (index - 1 + slides.length) % slides.length;
+        showSlide(index);
+      }
+
+      nextBtn.addEventListener('click', nextSlide);
+      prevBtn.addEventListener('click', prevSlide);
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') nextSlide();
+        if (e.key === 'ArrowLeft') prevSlide();
+      });
+
+      setInterval(nextSlide, 5000);
+      showSlide(index);
+    </script>
+  </body>
+</html>

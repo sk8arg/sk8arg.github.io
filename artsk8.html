@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Arg Sk8</title>
+        <link rel="stylesheet" href="estilo.css" />
+      </head>
+      
+
+<body>
+    <header>
+        <a href="index.html">
+          <img class="logo" src="Sin titulo-1.svg" alt="Logo Arg Sk8" />
+        </a>
+      
+        <button class="hamburguesa" aria-label="Abrir menu">☰</button>
+      
+        <nav>
+          <ul class="menu">
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="artsk8.html">Art Sk8</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+          </ul>
+        </nav>
+      </header>
+      
+
+  <main>
+    <h1>Art Sk8</h1>
+    <p>Descubri la mejor galeria de arte urbano y piezas inspiradas en la cultura del skate.</p>
+    <div class="cajacontenedora">
+      <div class="elemento-imagen">
+        <img src="galeri2.jpg" alt="Descripción 1"> 
+
+      </div>
+      <div class="elemento-imagen">
+        <img src="galeri3.jpg" alt="Descripción 2">
+    
+      </div>
+     <div class="elemento-imagen">
+        <img src="galeri4.jpg" alt="Descripción 3">
+     </div>
+    </div>
+  </main>
+
+  <footer>
+    Argentina 2025 Catalina Dominguez
+  </footer>
+
+  <script>
+    const btn = document.querySelector('.hamburguesa');
+    const menu = document.querySelector('nav ul');
+  
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('mostrar');
+    });
+  </script>
+  
+</body>
+</html>

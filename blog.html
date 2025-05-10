@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arg Sk8 | Blog</title>
+  <link rel="stylesheet" href="estilo.css" />
+ 
+</head>
+
+<body>
+  <header>
+    <a href="index.html">
+      <img class="logo" src="Sin titulo-1.svg" alt="Logo Arg Sk8" />
+    </a>
+
+    <button class="hamburguesa" aria-label="Abrir menú">☰</button>
+
+    <nav>
+      <ul class="menu">
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="artsk8.html">Art Sk8</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="entrada-blog">
+      <h1>Bienvenidos a nuestro Blog</h1>
+      <p>Explorá historias, entrevistas, arte y cultura dentro del universo del skate argentino. Este espacio es un reflejo del movimiento urbano, con voces reales, diseño auténtico y pasión sobre ruedas.</p>
+    </section>
+
+    <!-- Carrusel de imágenes -->
+    <section class="carrusel">
+      <div class="carrusel-container">
+        <img src="ska81.png" alt="Skater en acción 1" />
+        <img src="sk82.png" alt="Skater en acción 2" />
+        <img src="sk83.jpg" alt="Skater en acción 3" />
+      </div>
+    </section>
+
+    <!-- Notas destacadas -->
+    <section class="notas-destacadas">
+      <h2>Notas destacadas</h2>
+      <article class="nota">
+        <h3><a href="#">Entrevista exclusiva: voces del skate en Argentina</a></h3>
+        <p>Charlamos con referentes de la escena local sobre la evolución del skate y su impacto cultural.</p>
+      </article>
+      <article class="nota">
+        <h3><a href="#">5 spots imperdibles para skaters urbanos</a></h3>
+        <p>Una guía con lugares icónicos para practicar y disfrutar del skate con estilo.</p>
+      </article>
+      <article class="nota">
+        <h3><a href="#">Arte callejero y tablas: cuando el diseño pisa el asfalto</a></h3>
+        <p>Exploramos cómo el arte gráfico y el skate se fusionan en una misma cultura visual.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    Argentina 2025 - Catalina Dominguez
+  </footer>
+
+  <script>
+    const btn = document.querySelector('.hamburguesa');
+    const menu = document.querySelector('nav ul');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('mostrar');
+    });
+  </script>
+</body>
+</html>

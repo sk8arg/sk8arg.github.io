@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arg Sk8 - Eventos</title>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+
+<body>
+  <header>
+    <a href="index.html">
+      <img class="logo" src="Sin titulo-1.svg" alt="Logo Arg Sk8" />
+    </a>
+    <button class="hamburguesa" aria-label="Abrir menú">☰</button>
+    <nav>
+      <ul class="menu">
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="artsk8.html">Art Sk8</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Eventos</h1>
+    <p>Enterate de las competencias, ferias y encuentros skaters que se vienen.</p>
+
+    <!-- Eventos próximos -->
+    <section class="eventos-proximos">
+      <h2>Próximos eventos</h2>
+      <div class="evento">
+        <h3>Encuentro Sk8 2025</h3>
+        <p>📅 15 de junio | 📍 Plaza Trevelin</p>
+        <p>Arte urbano, competencias libres, feria de proyectos y más.</p>
+      </div>
+      <div class="evento">
+        <h3>Skate Jam Patagonia</h3>
+        <p>📅 10 de julio | 📍 Centro Cultural Esquel</p>
+        <p>Conciertos, demo profesional y exposición artística.</p>
+      </div>
+    </section>
+
+    <!-- Galería de eventos anteriores (carrusel) -->
+    <section class="galeria-eventos">
+      <h2>Galería de eventos anteriores</h2>
+      <div class="carrusel">
+        <div class="carrusel-container">
+          <img src="event1.jpg" alt="Foto del evento 1" />
+          <img src="event2.jpg" alt="Foto del evento 2" />
+          <img src="event3.jpg" alt="Foto del evento 3" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Formulario de inscripción -->
+    <section class="formulario-eventos">
+      <h2>¿Querés participar o recibir novedades?</h2>
+      <form>
+        <input type="text" placeholder="Tu nombre" required />
+        <input type="email" placeholder="Tu correo" required />
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <!-- Mapa de ubicación -->
+    <section class="mapa-evento">
+      <h2>Ubicación de nuestros eventos</h2>
+      <div style="width:100%;max-width:800px;margin:auto;">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3120.3801905940494!2d-71.51517812430324!3d-43.08521777914307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbdea99898a4f1d3d%3A0x8b6edb7cb12fcd9e!2sPlaza%20Coronel%20Fontana%2C%20Trevelin%2C%20Chubut!5e0!3m2!1ses-419!2sar!4v1715389571076" 
+          width="100%" 
+          height="400" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Argentina 2025 Catalina Dominguez
+  </footer>
+
+  <script>
+    const btn = document.querySelector('.hamburguesa');
+    const menu = document.querySelector('nav ul');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('mostrar');
+    });
+  </script>
+</body>
+</html>
