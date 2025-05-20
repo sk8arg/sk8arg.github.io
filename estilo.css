@@ -47,45 +47,44 @@ p {
   margin-left: auto;
   margin-right: auto;
 }
-.anuncio-inter-sitio {
-  text-align: center;
-  padding: 2rem 1rem;
-  background-color: #000000;
-  margin-top: 3rem;
+.seccion-anuncio-companero {
+  text-align: center; /* Centra el texto y el iframe */
+  padding: 30px 20px; /* Espaciado interno */
+  margin: 40px auto; /* Espaciado externo y centrado para la sección */
+  background-color: #1a1a1a; /* coloque un fondo para destacarlo del fondo negro */
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  max-width: 1200px; /* Limita el ancho de la sección */
+  border-radius: 8px; /* Bordes redondeados */
 }
 
-.anuncio-banner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 728px;
-  max-width: 100%;
-  height: 90px;
-  margin: 0 auto;
-  background: linear-gradient(to right, #81da92ea, #62c95d);
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
+.seccion-anuncio-companero h2,
+.seccion-anuncio-companero p {
+  color: #ffffff; /* Asegura que el texto sea mas visble en el fondo oscuro */
+  margin-bottom: 15px; /* Espaciado entre elementos de texto */
 }
 
-.anuncio-banner:hover {
-  transform: scale(1.02);
+#anuncio-companero {
+  border: 0; /* Elimina el borde predeterminado del iframe */
+  overflow: hidden; /* Oculta barras de desplazamiento si el contenido excede el tamaño */
+  display: block; /* Para que margin: auto funcione correctamente */
+  margin: 20px auto; /* Centra el iframe horizontalmente y añade espaciado */
+  
+  /* Estilos para celulares (300x600px) */
+  width: 300px;
+  height: 600px;
+  max-width: 100%; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra para destacarlo */
+  border-radius: 8px; /* Bordes redondeados para el iframe */
 }
 
-.icono-anuncio {
-  width: 48px;
-  height: 48px;
-  margin-right: 16px;
+/* Media Query para tamaños de escritorio (728x90px) */
+@media screen and (min-width: 768px) { 
+  #anuncio-companero {
+      width: 728px;
+      height: 90px;
+  }
 }
-
-.texto-anuncio {
-  font-size: 1rem;
-  text-align: left;
-  line-height: 1.2;
-}
-
 /* Estilos para la sección Hero */
 .hero {
   position: relative;
