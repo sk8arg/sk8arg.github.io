@@ -1,47 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Contactanos</title>
-        <link rel="stylesheet" href="estilo.css" />
-      </head>
-      
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contactanos</title>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
 
 <body>
-    <header>
-        <a href="index.html">
-          <img class="logo" src="Sin titulo-1.svg" alt="Logo Arg Sk8" />
-        </a>
-      
-        <button class="hamburguesa" aria-label="Abrir menu">☰</button>
-      
-        <nav>
-          <ul class="menu">
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="artsk8.html">Art Sk8</a></li>
-            <li><a href="eventos.html">Eventos</a></li>
-            <li><a href="contactanos.html">Contacto</a></li>
-          </ul>
-        </nav>
- <section class="formulario-contacto">
-  <h2>Contacto</h2>
-  <form action="gracias.html" method="post">
-    
-    <label for="nombre">Nombre y Apellido:</label>
-    <input type="text" id="nombre" name="nombre" required>
+  <header>
+    <a href="index.html">
+      <img class="logo" src="Sin titulo-1.svg" alt="Logo Arg Sk8" />
+    </a>
 
-    <label for="email">E-mail:</label>
-    <input type="email" id="email" name="email" required>
+    <button class="hamburguesa" aria-label="Abrir menu">☰</button>
 
-    <label for="mensaje">Mensage:</label>
-    <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+    <nav>
+      <ul class="menu">
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="artsk8.html">Art Sk8</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="contactanos.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <button type="submit">Enviar</button>
-  </form>
- </section>
+  <section class="formulario-contacto">
+    <h2>Contacto</h2>
+    <form action="gracias.html" method="post">
+      <label for="nombre">Nombre y Apellido:</label>
+      <input type="text" id="nombre" name="nombre" required>
 
-          
-      </header>
-      
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="mensaje">Mensage:</label>
+      <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <script>
+    document.querySelector("form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      window.location.href = "gracias.html";
+    });
+  </script>
+
+</body>
+</html>
