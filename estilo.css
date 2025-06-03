@@ -10,7 +10,7 @@
 
 /* Estilos generales */
 body {
-  background-color: #090909; /* Fondo negro */
+  background-color: #090909;
   font-family: 'Montserrat', sans-serif;
   color: #ffffff;
 }
@@ -48,48 +48,46 @@ p {
   margin-right: auto;
 }
 .seccion-anuncio-companero {
-  text-align: center; /* Centra el texto y el iframe */
-  padding: 30px 20px; /* Espaciado interno */
-  margin: 40px auto; /* Espaciado externo y centrado para la sección */
-  background-color: #1a1a1a; /* coloque un fondo para destacarlo del fondo negro */
+  text-align: center;
+  padding: 30px 20px;
+  margin: 40px auto;
+  background-color: #1a1a1a;
   border-top: 1px solid #333;
   border-bottom: 1px solid #333;
-  max-width: 1200px; /* Limita el ancho de la sección */
-  border-radius: 8px; /* Bordes redondeados */
+  max-width: 1200px;
+  border-radius: 8px;
 }
 
 .seccion-anuncio-companero h2,
 .seccion-anuncio-companero p {
-  color: #ffffff; /* Asegura que el texto sea mas visble en el fondo oscuro */
-  margin-bottom: 15px; /* Espaciado entre elementos de texto */
+  color: #ffffff;
+  margin-bottom: 15px;
 }
 
 #anuncio-companero {
-  border: 0; /* Elimina el borde predeterminado del iframe */
-  overflow: hidden; /* Oculta barras de desplazamiento si el contenido excede el tamaño */
-  display: block; /* Para que margin: auto funcione correctamente */
-  margin: 20px auto; /* Centra el iframe horizontalmente y añade espaciado */
-  
-  /* Estilos para celulares (300x600px) */
+  border: 0;
+  overflow: hidden;
+  display: block;
+  margin: 20px auto;
   width: 300px;
   height: 600px;
-  max-width: 100%; 
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra para destacarlo */
-  border-radius: 8px; /* Bordes redondeados para el iframe */
+  max-width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
 }
 
-/* Media Query para tamaños de escritorio (728x90px) */
 @media screen and (min-width: 768px) { 
   #anuncio-companero {
       width: 728px;
       height: 90px;
   }
 }
+
 /* Estilos para la sección Hero */
 .hero {
   position: relative;
   width: 100%;
-  height: 600px; /* Ajusta la altura según prefieras */
+  height: 600px;
   background-image: url('banner-principal.jpg'); 
   background-size: cover;
   background-position: center;
@@ -106,7 +104,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(39, 37, 37, 0.984); /* Capa oscura para mejorar la legibilidad del texto */
+  background-color: rgba(39, 37, 37, 0.984);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -114,7 +112,7 @@ p {
 
 .hero-content {
   position: relative;
-  z-index: 10; /* Asegura que el contenido esté sobre la capa oscura */
+  z-index: 10;
   max-width: 800px;
   padding: 0 20px;
 }
@@ -123,7 +121,7 @@ p {
   font-size: 48px;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #c4a35a; /* Usando uno de tus colores */
+  color: #c4a35a;
 }
 
 .hero-content p {
@@ -147,123 +145,108 @@ p {
   background-color: #a78a49;
 }
 
-/* Ajustes para el banner actual (opcional) */
 .banner-contenedor {
-  margin-top: 20px; /* Agrega un poco de espacio debajo de la sección hero */
+  margin-top: 20px;
 }
 
-/* Mejora visual de la sección de imágenes */
-.cajacontenedora {
-  /* Mantenemos la disposición flex */
-  display: flex;
-  flex-wrap: wrap;
-  margin: 40px auto;
-  justify-content: center;
-  gap: 20px;
-  max-width: 1200px;
-  padding: 20px;
-}
-
-.elemento-imagen {
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  text-align: center;
-  width: calc(33.33% - 20px);
-  margin-bottom: 20px;
-}
-
-.elemento-imagen img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: 10px;
-  border-radius: 6px;
-}
-
-.elemento-imagen p {
-  font-size: 16px;
-  color: #555;
-  margin-bottom: 0;
-}
-
-/* Media queries para la sección hero (opcional, para ajustar la altura en móviles) */
 @media (max-width: 768px) {
   .hero {
     height: 450px;
   }
-
   .hero-content h1 {
     font-size: 36px;
   }
-
   .hero-content p {
     font-size: 18px;
   }
 }
-/* Estilos para el contenedor de imágenes */
+
+/* --------- GALERÍA CIRO --------- */
 .cajacontenedora {
-  display: flex; /* Para alinear los elementos en fila */
-  flex-wrap: wrap; /* Para que los elementos pasen a la siguiente línea en pantallas pequeñas */
-  justify-content: center; /* Centra los elementos horizontalmente */
-  gap: 20px; /* Espacio entre los elementos */
-  max-width: 1200px; /* Ajusta el ancho máximo del contenedor según necesites */
-  margin: 40px auto; /* Margen superior e inferior y centrado horizontal */
-  padding: 20px; /* Espacio interno alrededor del contenedor */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
 }
 
-/* Estilos para cada elemento con imagen */
+/* Caja individual con imagen y texto */
 .elemento-imagen {
-  background-color: #ffffff;
+  flex: 1 1 calc(33.33% - 20px);
+  box-sizing: border-box;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 15px;
+  background-color: #fff;
   text-align: center;
-  width: calc(33.33% - 20px); /* Aproximadamente un tercio del ancho, restando el espacio */
-  margin-bottom: 20px; /* Espacio debajo de cada elemento */
 }
 
+/* NUEVO BLOQUE - PROPORCIONA TAMAÑO UNIFORME Y ESTILO PROFESIONAL */
 .elemento-imagen img {
-  max-width: 100%; /* La imagen no excederá el ancho de su contenedor */
-  height: auto; /* Mantiene la proporción de la imagen */
-  display: block; /* Evita espacios extra debajo de la imagen */
-  margin-bottom: 10px; /* Espacio entre la imagen y la descripción */
-  border-radius: 6px; /* Opcional: bordes redondeados para la imagen */
+  width: 100%;
+  max-width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 0 auto;
+  display: block;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+  background: #eee;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
+.elemento-imagen:hover img {
+  transform: scale(1.03);
+  box-shadow: 0 10px 32px rgba(0,0,0,0.25);
+}
+
+/* Texto dentro de la caja */
 .elemento-imagen p {
   font-size: 16px;
-  color: #555;
-  margin-bottom: 0; /* Elimina el margen inferior predeterminado del párrafo */
+  color: #222;
+  margin-top: 10px;
+  text-align: center;
 }
 
-/* Media  para tablets (hasta 1024px) */
+/* Tablet: 2 columnas */
+@media (max-width: 900px) {
+  .elemento-imagen {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+/* Celular: 1 columna */
+@media (max-width: 600px) {
+  .elemento-imagen {
+    flex: 1 1 100%;
+  }
+}
+
+/* Media para tablets (hasta 1024px) */
 @media (max-width: 1024px) {
   .elemento-imagen {
-    width: calc(50% - 15px); /* Dos elementos por fila */
+    width: calc(50% - 15px);
   }
 }
 
 /* Media para celulares (hasta 768px) */
 @media (max-width: 768px) {
   .elemento-imagen {
-    width: 100%; /* Un elemento por fila */
+    width: 100%;
   }
 }
 @media (min-width: 1360px) {
   .elemento-imagen {
-    width: 33.33%; /* Tres elementos por fila */
-    box-sizing: border-box; /* Asegura que los márgenes o bordes no afecten el ancho */
+    width: 33.33%;
+    box-sizing: border-box;
   }
 }
 
-
-
-
 /* Header y Footer */
 header {
-  background-color: #000000; /* Gris oscuro */
+  background-color: #000000;
   color: #f8f8f8;
   padding: 20px;
   text-align: center;
@@ -271,7 +254,7 @@ header {
 }
 
 footer {
-  background-color: #222222; /* Gris oscuro */
+  background-color: #222222;
   color: white;
   text-align: center;
   padding: 20px;
@@ -295,7 +278,7 @@ nav ul {
 
 /* Estilos de los enlaces del menu */
 nav ul li a {
-  color: #7d8ca3; /* Gris azulado */
+  color: #7d8ca3;
   text-decoration: none;
   font-size: 18px;
   font-weight: 600;
@@ -303,13 +286,11 @@ nav ul li a {
   border-bottom: 2px solid transparent;
 }
 
-/* Hover en los enlaces */
 nav ul li a:hover {
-  color: #c4a35a; /* Dorado */
+  color: #c4a35a;
   border-bottom: 2px solid #c4a35a;
 }
 
-/* Banner principal */
 .banner-contenedor {
   max-width: 1100px;
   margin: 40px auto;
@@ -334,6 +315,8 @@ nav ul li a:hover {
   justify-content: center;
   gap: 20px;
   max-width: 1000px;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 /* Estilos de las cajas */
@@ -348,12 +331,21 @@ nav ul li a:hover {
   font-size: 24px;
   font-weight: bold;
   transition: transform 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
 }
 
-/* Efecto hover en cajas */
 .caja:hover, .caja2:hover {
   transform: scale(1.03);
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+@media screen and (max-width: 768px) {
+  .caja, .caja2 {
+    width: 100%;
+    height: 150px;
+    line-height: 150px;
+    font-size: 20px;
+  }
 }
 
 /* Boton de hamburguesa (solo visible en moviles) */
@@ -362,7 +354,7 @@ nav ul li a:hover {
   font-size: 30px;
   background: none;
   border: none;
-  color: #7d8ca3; /* Color igual que los links */
+  color: #7d8ca3;
   cursor: pointer;
   position: absolute;
   top: 30px;
@@ -371,8 +363,6 @@ nav ul li a:hover {
 }
 
 /* RESPONSIVE DESIGN  */
-
-/* Tablet (hasta 1024px) */
 @media (max-width: 1024px) {
   .cajacontenedora {
     flex-direction: row;
@@ -397,7 +387,6 @@ nav ul li a:hover {
   }
 }
 
-/* Celulares (hasta 768px) */
 @media (max-width: 768px) {
   .banner-contenedor {
     padding: 10px;
@@ -411,7 +400,7 @@ nav ul li a:hover {
   }
 
   .logo {
-    height: 80px; /* Logo mas chico para celulares */
+    height: 80px;
   }
 
   nav ul {
@@ -427,12 +416,10 @@ nav ul li a:hover {
     font-size: 14px;
   }
 
-  /* Mostrar boton hamburguesa */
   .hamburguesa {
     display: block;
   }
 
-  /* Menu oculto */
   nav ul {
     display: none;
     flex-direction: column;
@@ -447,7 +434,6 @@ nav ul li a:hover {
     z-index: 10000;
   }
 
-  /* Menu visible cuando se activa */
   nav ul.mostrar {
     display: flex;
   }
@@ -506,7 +492,6 @@ nav ul li a:hover {
 }
 
 .carrusel img {
-
   max-width: 100%;
   height: 550px !important;
   object-fit: cover;
@@ -553,8 +538,8 @@ nav ul li a:hover {
   font-size: 16px;
   color: #a7a6a6;
 }
-/* SLIDER NOSOTROS */
 
+/* SLIDER NOSOTROS */
 .slider {
   max-width: 900px;
   margin: 40px auto;
@@ -609,7 +594,6 @@ nav ul li a:hover {
   right: 15px;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .slide {
     height: 300px;
@@ -677,4 +661,101 @@ nav ul li a:hover {
 .formulario-contacto button:hover {
   background-color: #000;
   color: white;
+}
+.menu a.activo {
+  color: #f5c254(255, 140, 0);
+  font-weight: bold;
+  text-decoration: underline;
+}
+/* Tarjetas de inicio */
+.inicio-tarjetas {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin: 48px auto 40px auto;
+  max-width: 1100px;
+}
+.tarjeta {
+  background: #908c8c;
+  color: #222;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.13);
+  padding: 32px 20px;
+  width: 270px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.tarjeta h3 {
+  color: #f5c254;
+}
+.tarjeta-boton {
+  margin-top: 18px;
+  display: inline-block;
+  background: #c4a35a;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s;
+  font-weight: bold;
+}
+.tarjeta-boton:hover {
+  background: #a78a49;
+}
+.tarjeta:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 10px 32px rgba(196,163,90,0.13);
+}
+
+/* Separador visual */
+.separador-grande {
+  border: none;
+  border-top: 2px solid #c4a35a;
+  margin: 48px auto 36px auto;
+  width: 80%;
+  opacity: 0.6;
+}
+
+/* Frase inspiradora */
+.frase-inspiradora {
+  text-align: center;
+  margin: 40px auto 36px auto;
+  font-style: italic;
+  color: #c4a35a;
+  font-size: 1.4em;
+}
+.frase-inspiradora blockquote {
+  border-left: 4px solid #c4a35a;
+  padding-left: 20px;
+  display: inline-block;
+}
+
+/* Slogan hero */
+.hero-slogan {
+  color: #fff;
+  font-size: 1.3em;
+  margin-top: 16px;
+  letter-spacing: 2px;
+  text-shadow: 0 4px 18px rgba(0,0,0,0.12);
+  animation: aparecer 1.5s ease;
+}
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: none;}
+}
+
+/* Responsive tarjetas */
+@media (max-width: 900px) {
+  .inicio-tarjetas {
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+  }
+  .tarjeta {
+    width: 95%;
+    max-width: 350px;
+  }
 }

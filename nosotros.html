@@ -21,6 +21,7 @@
           <li><a href="blog.html">Blog</a></li>
           <li><a href="artsk8.html">Art Sk8</a></li>
           <li><a href="eventos.html">Eventos</a></li>
+          <li><a href="contactanos.html">Contacto</a></li>
         </ul>
       </nav>
     </header>
@@ -97,5 +98,16 @@
       setInterval(nextSlide, 5000);
       showSlide(index);
     </script>
+    <script>
+      const enlaces = document.querySelectorAll('nav ul.menu li a');
+      const paginaActual = window.location.pathname.split('/').pop();
+    
+      enlaces.forEach(link => {
+        if (link.getAttribute('href') === paginaActual) {
+          link.classList.add('activo');
+        }
+      });
+    </script>
+    
   </body>
 </html>
