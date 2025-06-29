@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap');
 
-/* Fondo oscuro de respaldo global */
-body {
+/* ===== NUNCA SCROLL EN DESKTOP, SOLO EN MOBILE ===== */
+html, body {
+  height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
   background: #1a2232 !important;
   color: #fff;
   font-family: 'Montserrat', Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
+  overscroll-behavior: none;
 }
 
 /* ---- FONDOS DISTINTOS POR CADA SLIDE ---- */
@@ -17,9 +21,9 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: absolute;
+  position: fixed; /* fixed en desktop, absolute en mobile */
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   left: 0; top: 0;
   background-color: #1a2232 !important;
 }
@@ -65,11 +69,11 @@ body {
 
 /* ---- SLIDES ---- */
 .slide {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   opacity: 0;
   pointer-events: none;
   z-index: 1;
@@ -337,8 +341,15 @@ a:hover {
   font-size: 1.12em;
   opacity: 0;
   transform: translateY(20px);
+}
+.estrella-lista.estrella-animada li {
   animation: fadeInUp 0.7s forwards;
 }
+.estrella-lista.estrella-animada li:nth-child(1) { animation-delay: 0.1s; }
+.estrella-lista.estrella-animada li:nth-child(2) { animation-delay: 0.3s; }
+.estrella-lista.estrella-animada li:nth-child(3) { animation-delay: 0.5s; }
+.estrella-lista.estrella-animada li:nth-child(4) { animation-delay: 0.7s; }
+
 .estrella-lista li::before {
   content: "";
   display: inline-block;
@@ -365,10 +376,6 @@ a:hover {
 body {
   cursor: url('cursor\ metal.png') 32 40, auto; 
 }
-.estrella-lista li:nth-child(1) { animation-delay: 0.1s; }
-.estrella-lista li:nth-child(2) { animation-delay: 0.3s; }
-.estrella-lista li:nth-child(3) { animation-delay: 0.5s; }
-.estrella-lista li:nth-child(4) { animation-delay: 0.7s; }
 
 @keyframes fadeInUp {
   to {
@@ -417,6 +424,19 @@ body {
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
+  }
+}
+
+/* ----- EN MOBILE: slides vuelven a absolute y scroll normal ----- */
+@media (max-width: 800px) {
+  #slide-inicio, #slide-sobremi, #slide-argentina, #slide-acerca, 
+  #slide-webmovil, #slide-diseno, #slide-wireframes, #slide-presupuesto, #slide-gracias,
+  .slide {
+    position: absolute;
+    height: auto;
+    min-height: 100vh;
+    max-height: none;
+    overflow-y: visible;
   }
 }
 
