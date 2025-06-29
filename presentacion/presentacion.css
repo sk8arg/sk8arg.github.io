@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap');
 
+/* Fondo oscuro de respaldo global */
 body {
-  background: #fff;
-  color: #222;
+  background: #1a2232 !important;
+  color: #fff;
   font-family: 'Montserrat', Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -16,7 +17,11 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative;
+  position: absolute;
+  width: 100vw;
+  min-height: 100vh;
+  left: 0; top: 0;
+  background-color: #1a2232 !important;
 }
 #slide-inicio { background-image: url('fondo-sk8arg.jpg'); }
 #slide-inicio::before { background: rgba(0,0,0,0.22); }
@@ -60,30 +65,31 @@ body {
 
 /* ---- SLIDES ---- */
 .slide {
-  display: none;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100vw;
-  min-height: 100vh;
   position: absolute;
   top: 0;
   left: 0;
-  transition: opacity 0.7s;
+  width: 100vw;
+  min-height: 100vh;
   opacity: 0;
+  pointer-events: none;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   padding: 1.5em;
   padding-top: 8vh;
   box-sizing: border-box;
   background: transparent;
   overflow-y: auto;
+  background-color: #1a2232 !important;
+  transition: opacity 0.35s;
 }
 
 .slide.active {
-  display: flex;
   opacity: 1;
+  pointer-events: auto;
   z-index: 2;
-  animation: fadeIn 0.7s;
 }
 
 .slide.center {
@@ -414,7 +420,6 @@ body {
   }
 }
 
-/* ---- MOBILE OPTIMIZACIÓN EXTRAS 600PX ---- */
 @media (max-width: 600px) {
   .slide {
     padding: 0.5em;
@@ -436,7 +441,6 @@ body {
     box-sizing: border-box;
     overflow-x: hidden;
   }
-  /* Nav buttons abajo y más chicos */
   .nav-btn {
     top: auto;
     bottom: 5vh;
@@ -451,7 +455,6 @@ body {
   }
   #prevBtn { left: 6vw; right: auto; }
   #nextBtn { right: 6vw; left: auto; }
-  /* Slider webmovil */
   .webmovil-fotos {
     flex-direction: column;
     align-items: center;
@@ -676,7 +679,6 @@ body {
   letter-spacing: 0.3px;
 }
 
-/* ---- ANIMACIONES ---- */
 @keyframes fadeInDown {
   0% { opacity: 0; transform: translateY(-40px) scale(0.94);}
   100% { opacity: 1; transform: translateY(0) scale(1);}
@@ -686,7 +688,6 @@ body {
   100% { opacity: 1; transform: translateY(0) scale(1);}
 }
 
-/* ---- TITULOS ---- */
 .modern-title {
   font-family: 'Montserrat', 'Arial Black', sans-serif;
   font-size: 5.2em;
@@ -698,7 +699,6 @@ body {
   animation: fadeInDown 0.9s cubic-bezier(.62,.07,.6,1.24);
 }
 
-/* ---- SLOGAN ---- */
 .slogan-anim span {
   display: inline-block;
   font-family: 'Montserrat', Arial, sans-serif;
@@ -714,7 +714,6 @@ body {
   animation: fadeInUp 1.2s cubic-bezier(.62,.07,.6,1.24);
 }
 
-/* ---- INFO CARDS ---- */
 .info-cards {
   display: flex;
   gap: 2em;
@@ -758,7 +757,6 @@ body {
   display: inline-block;
 }
 
-/* ---- BOTÓN ---- */
 .btn-impact {
   margin-top: 2.1em;
   font-size: 1.1em;
