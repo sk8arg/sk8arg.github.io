@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arg Sk8</title>
+    <link rel="stylesheet" href="estilo.css" />
+    <link rel="stylesheet" href="css/lightbox.min.css">
+    <!-- Swiper CSS para el carrusel -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  </head>
+<body>
+  <header>
+    <a href="index.html">
+      <img class="logo" src="Sin titulo-1.svg" alt="Logo Arg Sk8" />
+    </a>
+    <button class="hamburguesa" aria-label="Abrir menu">☰</button>
+    <nav>
+      <ul class="menu">
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="artsk8.html">Art Sk8</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="contactanos.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION MEJORADA -->
+  <section class="hero">
+    <picture>
+      <source media="(min-width: 1200px)" srcset="img/banner-principal-large.jpg">
+      <source media="(min-width: 768px)" srcset="img/banner-principal-medium.jpg">
+      <img src="img/banner-principal-small.jpg" alt="Tu Comunidad Argentina de Skateboard" style="width:100%; height:auto; display:block; object-fit:cover;">
+    </picture>
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Tu Comunidad Argentina de Skateboard</h1>
+        <p>Descubre la pasión, el arte y los eventos que impulsan la escena del skate en Argentina.</p>
+        <a href="blog.html" class="hero-button">Explora el Blog</a>
+        <div class="hero-slogan">¡Deslizate con nosotros!</div>
+      </div>
+    </div>
+  </section>
+
+<main>
+  <!-- TARJETAS RESUMEN -->
+  <div class="inicio-tarjetas">
+    <div class="tarjeta">
+      <h3>Nuevas Fotos</h3>
+      <p>¡Cada semana nuevas imágenes en la galería!</p>
+      <a class="tarjeta-boton" href="#galeria">Ver galería</a>
+    </div>
+    <div class="tarjeta">
+      <h3>Próximos Eventos</h3>
+      <p>No te pierdas las fechas y encuentros.</p>
+      <a class="tarjeta-boton" href="eventos.html">Ver eventos</a>
+    </div>
+    <div class="tarjeta">
+      <h3>Sumate</h3>
+      <p>¿Querés ser parte de la comunidad? ¡Contactanos!</p>
+      <a class="tarjeta-boton" href="contactanos.html">Contactar</a>
+    </div>
+  </div>
+
+  <!-- SEPARADOR -->
+  <hr class="separador-grande" />
+
+  <!-- CARRUSEL DE IMÁGENES DESTACADAS CON FLECHAS -->
+  <section class="carrusel">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="BCHE-Competencia-Skate-005-min.jpg" alt="Skate 1"></div>
+        <div class="swiper-slide"><img src="joven-skateboarding-min.jpg" alt="Skate 2"></div>
+        <div class="swiper-slide"><img src="caja1.jpg" alt="Skate 3"></div>
+      </div>
+      <!-- Flechas de navegación -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
+
+  <!-- NOVEDADES O BLOG DESTACADO -->
+  <section class="notas-destacadas">
+    <h2>Últimas novedades</h2>
+    <div class="nota">
+      <h3><a href="blog.html#nota1">La movida en Buenos Aires</a></h3>
+      <p>Así fue el último encuentro en el Parque Centenario. ¡Fotos, trucos y comunidad!</p>
+    </div>
+    <div class="nota">
+      <h3><a href="blog.html#nota2">Arte y skate: nueva sección</a></h3>
+      <p>Inauguramos “Art Sk8”, un espacio para los artistas de la tabla.</p>
+    </div>
+  </section>
+
+  
+  <section class="frase-inspiradora">
+    <blockquote>
+      "El skateboarding no es solo un deporte, es una forma de vida."
+    </blockquote>
+  </section>
+
+    <div class="banner-contenedor">
+      <img src="banner.skt8.jpg" class="banner" alt="Banner Arg Sk8" />
+    </div>
+    
+    <section class="seccion-anuncio-companero">
+      <h2>¡Descubre!</h2>
+      <p>Echa un vistazo, no te quedes sin la mejor opción</p>
+      <iframe id="anuncio-companero"
+              src="https://mesalvaviandas.github.io/publicidad/"
+              title="Anuncio de un sitio compañero del curso">
+        <a href="https://mesalvaviandas.github.io/publicidad/" target="_blank">este enlace</a>.
+      </iframe>
+    </section>
+
+    <!-- GALERÍA DE FOTOS -->
+    <div class="cajacontenedora" id="galeria">
+      <div class="elemento-imagen">
+        <a href="ciro5.jpg" data-lightbox="fotos" title="Ciro 5">
+          <img src="ciro5.jpg" alt="Ciro 5">
+        </a>
+        <p>Ciro 5</p>
+      </div>
+      <div class="elemento-imagen">
+        <a href="ciro2.jpg" data-lightbox="fotos" title="Ciro 2">
+          <img src="ciro2.jpg" alt="Ciro 2">
+        </a>
+        <p>Ciro 2</p>
+      </div>
+      <div class="elemento-imagen">
+        <a href="ciro4.jpg" data-lightbox="fotos" title="Ciro 4">
+          <img src="ciro4.jpg" alt="Ciro 4">
+        </a>
+        <p>Ciro 4</p>
+      </div>
+    </div>
+  </main>
+    <!-- Botón centrado para ir a la Presentación -->
+<div class="btn-presentacion-wrap">
+  <a href="presentacion/" class="btn-presentacion">
+    <i class="fa fa-play"></i> Ver Presentación
+  </a>
+</div>
+  <footer>
+    Argentina 2025 Catalina Dominguez
+  </footer>
+
+  <script>
+    const btn = document.querySelector('.hamburguesa');
+    const menu = document.querySelector('nav ul');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('mostrar');
+    });
+  </script>
+  <script>
+    const enlaces = document.querySelectorAll('nav ul.menu li a');
+    const paginaActual = window.location.pathname.split('/').pop();
+    enlaces.forEach(link => {
+      if (link.getAttribute('href') === paginaActual) {
+        link.classList.add('activo');
+      }
+    });
+  </script>
+  <!-- Swiper JS para el carrusel -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: false, // NO infinito
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: false,
+    });
+  </script>
+  <script src="js/lightbox-plus-jquery.min.js"></script>
+</body>
+</html>
